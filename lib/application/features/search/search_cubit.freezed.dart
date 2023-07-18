@@ -22,6 +22,8 @@ mixin _$SearchState {
     required TResult Function() loading,
     required TResult Function(List<LocationModel> locations) data,
     required TResult Function() empty,
+    required TResult Function() noInternet,
+    required TResult Function() generalError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +32,8 @@ mixin _$SearchState {
     TResult? Function()? loading,
     TResult? Function(List<LocationModel> locations)? data,
     TResult? Function()? empty,
+    TResult? Function()? noInternet,
+    TResult? Function()? generalError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +42,8 @@ mixin _$SearchState {
     TResult Function()? loading,
     TResult Function(List<LocationModel> locations)? data,
     TResult Function()? empty,
+    TResult Function()? noInternet,
+    TResult Function()? generalError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +53,8 @@ mixin _$SearchState {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Data value) data,
     required TResult Function(_Empty value) empty,
+    required TResult Function(_NoInternetConnection value) noInternet,
+    required TResult Function(_GeneralError value) generalError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +63,8 @@ mixin _$SearchState {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Data value)? data,
     TResult? Function(_Empty value)? empty,
+    TResult? Function(_NoInternetConnection value)? noInternet,
+    TResult? Function(_GeneralError value)? generalError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +73,8 @@ mixin _$SearchState {
     TResult Function(_Loading value)? loading,
     TResult Function(_Data value)? data,
     TResult Function(_Empty value)? empty,
+    TResult Function(_NoInternetConnection value)? noInternet,
+    TResult Function(_GeneralError value)? generalError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -127,6 +139,8 @@ class _$_Initial implements _Initial {
     required TResult Function() loading,
     required TResult Function(List<LocationModel> locations) data,
     required TResult Function() empty,
+    required TResult Function() noInternet,
+    required TResult Function() generalError,
   }) {
     return initial();
   }
@@ -138,6 +152,8 @@ class _$_Initial implements _Initial {
     TResult? Function()? loading,
     TResult? Function(List<LocationModel> locations)? data,
     TResult? Function()? empty,
+    TResult? Function()? noInternet,
+    TResult? Function()? generalError,
   }) {
     return initial?.call();
   }
@@ -149,6 +165,8 @@ class _$_Initial implements _Initial {
     TResult Function()? loading,
     TResult Function(List<LocationModel> locations)? data,
     TResult Function()? empty,
+    TResult Function()? noInternet,
+    TResult Function()? generalError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -164,6 +182,8 @@ class _$_Initial implements _Initial {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Data value) data,
     required TResult Function(_Empty value) empty,
+    required TResult Function(_NoInternetConnection value) noInternet,
+    required TResult Function(_GeneralError value) generalError,
   }) {
     return initial(this);
   }
@@ -175,6 +195,8 @@ class _$_Initial implements _Initial {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Data value)? data,
     TResult? Function(_Empty value)? empty,
+    TResult? Function(_NoInternetConnection value)? noInternet,
+    TResult? Function(_GeneralError value)? generalError,
   }) {
     return initial?.call(this);
   }
@@ -186,6 +208,8 @@ class _$_Initial implements _Initial {
     TResult Function(_Loading value)? loading,
     TResult Function(_Data value)? data,
     TResult Function(_Empty value)? empty,
+    TResult Function(_NoInternetConnection value)? noInternet,
+    TResult Function(_GeneralError value)? generalError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -240,6 +264,8 @@ class _$_Loading implements _Loading {
     required TResult Function() loading,
     required TResult Function(List<LocationModel> locations) data,
     required TResult Function() empty,
+    required TResult Function() noInternet,
+    required TResult Function() generalError,
   }) {
     return loading();
   }
@@ -251,6 +277,8 @@ class _$_Loading implements _Loading {
     TResult? Function()? loading,
     TResult? Function(List<LocationModel> locations)? data,
     TResult? Function()? empty,
+    TResult? Function()? noInternet,
+    TResult? Function()? generalError,
   }) {
     return loading?.call();
   }
@@ -262,6 +290,8 @@ class _$_Loading implements _Loading {
     TResult Function()? loading,
     TResult Function(List<LocationModel> locations)? data,
     TResult Function()? empty,
+    TResult Function()? noInternet,
+    TResult Function()? generalError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -277,6 +307,8 @@ class _$_Loading implements _Loading {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Data value) data,
     required TResult Function(_Empty value) empty,
+    required TResult Function(_NoInternetConnection value) noInternet,
+    required TResult Function(_GeneralError value) generalError,
   }) {
     return loading(this);
   }
@@ -288,6 +320,8 @@ class _$_Loading implements _Loading {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Data value)? data,
     TResult? Function(_Empty value)? empty,
+    TResult? Function(_NoInternetConnection value)? noInternet,
+    TResult? Function(_GeneralError value)? generalError,
   }) {
     return loading?.call(this);
   }
@@ -299,6 +333,8 @@ class _$_Loading implements _Loading {
     TResult Function(_Loading value)? loading,
     TResult Function(_Data value)? data,
     TResult Function(_Empty value)? empty,
+    TResult Function(_NoInternetConnection value)? noInternet,
+    TResult Function(_GeneralError value)? generalError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -385,6 +421,8 @@ class _$_Data implements _Data {
     required TResult Function() loading,
     required TResult Function(List<LocationModel> locations) data,
     required TResult Function() empty,
+    required TResult Function() noInternet,
+    required TResult Function() generalError,
   }) {
     return data(locations);
   }
@@ -396,6 +434,8 @@ class _$_Data implements _Data {
     TResult? Function()? loading,
     TResult? Function(List<LocationModel> locations)? data,
     TResult? Function()? empty,
+    TResult? Function()? noInternet,
+    TResult? Function()? generalError,
   }) {
     return data?.call(locations);
   }
@@ -407,6 +447,8 @@ class _$_Data implements _Data {
     TResult Function()? loading,
     TResult Function(List<LocationModel> locations)? data,
     TResult Function()? empty,
+    TResult Function()? noInternet,
+    TResult Function()? generalError,
     required TResult orElse(),
   }) {
     if (data != null) {
@@ -422,6 +464,8 @@ class _$_Data implements _Data {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Data value) data,
     required TResult Function(_Empty value) empty,
+    required TResult Function(_NoInternetConnection value) noInternet,
+    required TResult Function(_GeneralError value) generalError,
   }) {
     return data(this);
   }
@@ -433,6 +477,8 @@ class _$_Data implements _Data {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Data value)? data,
     TResult? Function(_Empty value)? empty,
+    TResult? Function(_NoInternetConnection value)? noInternet,
+    TResult? Function(_GeneralError value)? generalError,
   }) {
     return data?.call(this);
   }
@@ -444,6 +490,8 @@ class _$_Data implements _Data {
     TResult Function(_Loading value)? loading,
     TResult Function(_Data value)? data,
     TResult Function(_Empty value)? empty,
+    TResult Function(_NoInternetConnection value)? noInternet,
+    TResult Function(_GeneralError value)? generalError,
     required TResult orElse(),
   }) {
     if (data != null) {
@@ -501,6 +549,8 @@ class _$_Empty implements _Empty {
     required TResult Function() loading,
     required TResult Function(List<LocationModel> locations) data,
     required TResult Function() empty,
+    required TResult Function() noInternet,
+    required TResult Function() generalError,
   }) {
     return empty();
   }
@@ -512,6 +562,8 @@ class _$_Empty implements _Empty {
     TResult? Function()? loading,
     TResult? Function(List<LocationModel> locations)? data,
     TResult? Function()? empty,
+    TResult? Function()? noInternet,
+    TResult? Function()? generalError,
   }) {
     return empty?.call();
   }
@@ -523,6 +575,8 @@ class _$_Empty implements _Empty {
     TResult Function()? loading,
     TResult Function(List<LocationModel> locations)? data,
     TResult Function()? empty,
+    TResult Function()? noInternet,
+    TResult Function()? generalError,
     required TResult orElse(),
   }) {
     if (empty != null) {
@@ -538,6 +592,8 @@ class _$_Empty implements _Empty {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Data value) data,
     required TResult Function(_Empty value) empty,
+    required TResult Function(_NoInternetConnection value) noInternet,
+    required TResult Function(_GeneralError value) generalError,
   }) {
     return empty(this);
   }
@@ -549,6 +605,8 @@ class _$_Empty implements _Empty {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Data value)? data,
     TResult? Function(_Empty value)? empty,
+    TResult? Function(_NoInternetConnection value)? noInternet,
+    TResult? Function(_GeneralError value)? generalError,
   }) {
     return empty?.call(this);
   }
@@ -560,6 +618,8 @@ class _$_Empty implements _Empty {
     TResult Function(_Loading value)? loading,
     TResult Function(_Data value)? data,
     TResult Function(_Empty value)? empty,
+    TResult Function(_NoInternetConnection value)? noInternet,
+    TResult Function(_GeneralError value)? generalError,
     required TResult orElse(),
   }) {
     if (empty != null) {
@@ -571,4 +631,256 @@ class _$_Empty implements _Empty {
 
 abstract class _Empty implements SearchState {
   const factory _Empty() = _$_Empty;
+}
+
+/// @nodoc
+abstract class _$$_NoInternetConnectionCopyWith<$Res> {
+  factory _$$_NoInternetConnectionCopyWith(_$_NoInternetConnection value,
+          $Res Function(_$_NoInternetConnection) then) =
+      __$$_NoInternetConnectionCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_NoInternetConnectionCopyWithImpl<$Res>
+    extends _$SearchStateCopyWithImpl<$Res, _$_NoInternetConnection>
+    implements _$$_NoInternetConnectionCopyWith<$Res> {
+  __$$_NoInternetConnectionCopyWithImpl(_$_NoInternetConnection _value,
+      $Res Function(_$_NoInternetConnection) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_NoInternetConnection implements _NoInternetConnection {
+  const _$_NoInternetConnection();
+
+  @override
+  String toString() {
+    return 'SearchState.noInternet()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_NoInternetConnection);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<LocationModel> locations) data,
+    required TResult Function() empty,
+    required TResult Function() noInternet,
+    required TResult Function() generalError,
+  }) {
+    return noInternet();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<LocationModel> locations)? data,
+    TResult? Function()? empty,
+    TResult? Function()? noInternet,
+    TResult? Function()? generalError,
+  }) {
+    return noInternet?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<LocationModel> locations)? data,
+    TResult Function()? empty,
+    TResult Function()? noInternet,
+    TResult Function()? generalError,
+    required TResult orElse(),
+  }) {
+    if (noInternet != null) {
+      return noInternet();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Data value) data,
+    required TResult Function(_Empty value) empty,
+    required TResult Function(_NoInternetConnection value) noInternet,
+    required TResult Function(_GeneralError value) generalError,
+  }) {
+    return noInternet(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Data value)? data,
+    TResult? Function(_Empty value)? empty,
+    TResult? Function(_NoInternetConnection value)? noInternet,
+    TResult? Function(_GeneralError value)? generalError,
+  }) {
+    return noInternet?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Data value)? data,
+    TResult Function(_Empty value)? empty,
+    TResult Function(_NoInternetConnection value)? noInternet,
+    TResult Function(_GeneralError value)? generalError,
+    required TResult orElse(),
+  }) {
+    if (noInternet != null) {
+      return noInternet(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NoInternetConnection implements SearchState {
+  const factory _NoInternetConnection() = _$_NoInternetConnection;
+}
+
+/// @nodoc
+abstract class _$$_GeneralErrorCopyWith<$Res> {
+  factory _$$_GeneralErrorCopyWith(
+          _$_GeneralError value, $Res Function(_$_GeneralError) then) =
+      __$$_GeneralErrorCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_GeneralErrorCopyWithImpl<$Res>
+    extends _$SearchStateCopyWithImpl<$Res, _$_GeneralError>
+    implements _$$_GeneralErrorCopyWith<$Res> {
+  __$$_GeneralErrorCopyWithImpl(
+      _$_GeneralError _value, $Res Function(_$_GeneralError) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_GeneralError implements _GeneralError {
+  const _$_GeneralError();
+
+  @override
+  String toString() {
+    return 'SearchState.generalError()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_GeneralError);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<LocationModel> locations) data,
+    required TResult Function() empty,
+    required TResult Function() noInternet,
+    required TResult Function() generalError,
+  }) {
+    return generalError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<LocationModel> locations)? data,
+    TResult? Function()? empty,
+    TResult? Function()? noInternet,
+    TResult? Function()? generalError,
+  }) {
+    return generalError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<LocationModel> locations)? data,
+    TResult Function()? empty,
+    TResult Function()? noInternet,
+    TResult Function()? generalError,
+    required TResult orElse(),
+  }) {
+    if (generalError != null) {
+      return generalError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Data value) data,
+    required TResult Function(_Empty value) empty,
+    required TResult Function(_NoInternetConnection value) noInternet,
+    required TResult Function(_GeneralError value) generalError,
+  }) {
+    return generalError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Data value)? data,
+    TResult? Function(_Empty value)? empty,
+    TResult? Function(_NoInternetConnection value)? noInternet,
+    TResult? Function(_GeneralError value)? generalError,
+  }) {
+    return generalError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Data value)? data,
+    TResult Function(_Empty value)? empty,
+    TResult Function(_NoInternetConnection value)? noInternet,
+    TResult Function(_GeneralError value)? generalError,
+    required TResult orElse(),
+  }) {
+    if (generalError != null) {
+      return generalError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GeneralError implements SearchState {
+  const factory _GeneralError() = _$_GeneralError;
 }
