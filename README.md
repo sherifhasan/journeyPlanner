@@ -1,4 +1,5 @@
 # Journey Planner
+This app assists users in searching for a starting point and displays matching journeys. It provides a simple interface for users to enter search text and retrieves results
 
 ## Decisions
 
