@@ -7,7 +7,7 @@ import 'remote_data_source.dart';
 
 class RemoteDataSourceImpl extends RemoteDataSource {
   @override
-  Future<List<LocationDto>> getData(String query) async {
+  Future<List<LocationDto>> getLocations(String query) async {
     try {
       final url = Uri.parse(ApiConstants.searchApiUrl(query));
       final response = await http.get(url);
