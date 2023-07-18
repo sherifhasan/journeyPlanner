@@ -131,13 +131,14 @@ class __$$_LocationDtoCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LocationDto implements _LocationDto {
+class _$_LocationDto extends _LocationDto {
   const _$_LocationDto(
       {required this.name,
       required this.disassembledName,
       required this.type,
       required final List<double> coord})
-      : _coord = coord;
+      : _coord = coord,
+        super._();
 
   factory _$_LocationDto.fromJson(Map<String, dynamic> json) =>
       _$$_LocationDtoFromJson(json);
@@ -192,12 +193,13 @@ class _$_LocationDto implements _LocationDto {
   }
 }
 
-abstract class _LocationDto implements LocationDto {
+abstract class _LocationDto extends LocationDto {
   const factory _LocationDto(
       {required final String name,
       required final String disassembledName,
       required final String type,
       required final List<double> coord}) = _$_LocationDto;
+  const _LocationDto._() : super._();
 
   factory _LocationDto.fromJson(Map<String, dynamic> json) =
       _$_LocationDto.fromJson;
