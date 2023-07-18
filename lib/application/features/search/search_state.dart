@@ -9,4 +9,7 @@ class SearchState with _$SearchState {
   const factory SearchState.data(List<LocationModel> locations) = _Data;
 
   const factory SearchState.empty() = _Empty;
+  const factory SearchState.noInternet() = _NoInternetConnection;
+  const factory SearchState.generalError() = _GeneralError;
+
 }

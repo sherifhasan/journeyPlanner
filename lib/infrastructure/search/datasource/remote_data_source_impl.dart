@@ -3,9 +3,9 @@ import 'dart:io';
 import 'package:journey_planner/application/utils/app_constants.dart';
 import 'package:journey_planner/infrastructure/search/models/location_model_dto.dart';
 import 'package:http/http.dart' as http;
-import 'remote_data_source.dart';
+import 'data_source.dart';
 
-class RemoteDataSourceImpl extends RemoteDataSource {
+class RemoteDataSourceImpl extends DataSource {
   @override
   Future<List<LocationDto>> getLocations(String query) async {
     try {
