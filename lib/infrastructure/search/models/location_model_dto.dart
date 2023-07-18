@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:journey_planner/domain/search/models/location_model.dart';
 
 part 'location_model_dto.freezed.dart';
 
@@ -13,7 +14,11 @@ class LocationDto with _$LocationDto {
     required List<double> coord,
   }) = _LocationDto;
 
+  const LocationDto._();
 
   factory LocationDto.fromJson(Map<String, dynamic> json) =>
       _$LocationDtoFromJson(json);
+
+  LocationModel toEntity() => LocationModel(
+      name: name, disassembledName: disassembledName, type: type, coord: coord);
 }
