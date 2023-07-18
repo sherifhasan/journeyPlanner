@@ -1,7 +1,6 @@
 # Journey Planner
 
-This app assists users in searching for a starting point and displays matching journeys. It provides
-a simple interface for users to enter search text and retrieves results
+This app assists users in searching for a starting point and displays matching journeys. It follows the Domain-Driven Design (DDD) architecture for a clear separation of concerns, utilizes GetIt for dependency injection, and employs the BLoC (Business Logic Component) pattern for state management. Flutter Hooks is used for stateful logic within functional widgets.
 
 ## Decisions
 
