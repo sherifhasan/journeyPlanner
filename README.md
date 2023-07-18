@@ -2,8 +2,6 @@
 
 This app assists users in searching for a starting point and displays matching journeys. It follows the Domain-Driven Design (DDD) architecture for a clear separation of concerns, utilizes GetIt for dependency injection, and employs the BLoC (Business Logic Component) pattern for state management. Flutter Hooks is used for stateful logic within functional widgets.
 
-## Decisions
-
 ### Architecture
 
 1. Domain driven design helps separate domain logic from framework-specific code,
@@ -43,6 +41,3 @@ It provides type safety, reducing runtime exceptions and improving code quality.
 2. Reducing boilerplate code and making the logic more declarative.
 3. Flutter Hooks promotes reusability of hooks-based components, allowing for easier composition and
    sharing of logic across different parts of the app.
-
-
-
