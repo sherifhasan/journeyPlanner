@@ -17,7 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$LocationModel {
   String get name => throw _privateConstructorUsedError;
-  String get disassembledName => throw _privateConstructorUsedError;
+  String? get disassembledName => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
   List<double> get coord => throw _privateConstructorUsedError;
 
@@ -33,7 +33,7 @@ abstract class $LocationModelCopyWith<$Res> {
       _$LocationModelCopyWithImpl<$Res, LocationModel>;
   @useResult
   $Res call(
-      {String name, String disassembledName, String type, List<double> coord});
+      {String name, String? disassembledName, String type, List<double> coord});
 }
 
 /// @nodoc
@@ -50,7 +50,7 @@ class _$LocationModelCopyWithImpl<$Res, $Val extends LocationModel>
   @override
   $Res call({
     Object? name = null,
-    Object? disassembledName = null,
+    Object? disassembledName = freezed,
     Object? type = null,
     Object? coord = null,
   }) {
@@ -59,10 +59,10 @@ class _$LocationModelCopyWithImpl<$Res, $Val extends LocationModel>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      disassembledName: null == disassembledName
+      disassembledName: freezed == disassembledName
           ? _value.disassembledName
           : disassembledName // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -84,7 +84,7 @@ abstract class _$$_LocationModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String name, String disassembledName, String type, List<double> coord});
+      {String name, String? disassembledName, String type, List<double> coord});
 }
 
 /// @nodoc
@@ -99,7 +99,7 @@ class __$$_LocationModelCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = null,
-    Object? disassembledName = null,
+    Object? disassembledName = freezed,
     Object? type = null,
     Object? coord = null,
   }) {
@@ -108,10 +108,10 @@ class __$$_LocationModelCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      disassembledName: null == disassembledName
+      disassembledName: freezed == disassembledName
           ? _value.disassembledName
           : disassembledName // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -129,7 +129,7 @@ class __$$_LocationModelCopyWithImpl<$Res>
 class _$_LocationModel implements _LocationModel {
   const _$_LocationModel(
       {required this.name,
-      required this.disassembledName,
+      this.disassembledName,
       required this.type,
       required final List<double> coord})
       : _coord = coord;
@@ -137,7 +137,7 @@ class _$_LocationModel implements _LocationModel {
   @override
   final String name;
   @override
-  final String disassembledName;
+  final String? disassembledName;
   @override
   final String type;
   final List<double> _coord;
@@ -179,14 +179,14 @@ class _$_LocationModel implements _LocationModel {
 abstract class _LocationModel implements LocationModel {
   const factory _LocationModel(
       {required final String name,
-      required final String disassembledName,
+      final String? disassembledName,
       required final String type,
       required final List<double> coord}) = _$_LocationModel;
 
   @override
   String get name;
   @override
-  String get disassembledName;
+  String? get disassembledName;
   @override
   String get type;
   @override

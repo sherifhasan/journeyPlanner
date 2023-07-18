@@ -9,7 +9,7 @@ part of 'location_model_dto.dart';
 _$_LocationDto _$$_LocationDtoFromJson(Map<String, dynamic> json) =>
     _$_LocationDto(
       name: json['name'] as String,
-      disassembledName: json['disassembledName'] as String,
+      disassembledName: json['disassembledName'] as String?,
       type: json['type'] as String,
       coord: (json['coord'] as List<dynamic>)
           .map((e) => (e as num).toDouble())

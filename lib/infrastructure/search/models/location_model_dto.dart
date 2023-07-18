@@ -9,7 +9,7 @@ part 'location_model_dto.g.dart';
 class LocationDto with _$LocationDto {
   const factory LocationDto({
     required String name,
-    required String disassembledName,
+    String? disassembledName,
     required String type,
     required List<double> coord,
   }) = _LocationDto;

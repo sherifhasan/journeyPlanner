@@ -21,7 +21,7 @@ LocationDto _$LocationDtoFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$LocationDto {
   String get name => throw _privateConstructorUsedError;
-  String get disassembledName => throw _privateConstructorUsedError;
+  String? get disassembledName => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
   List<double> get coord => throw _privateConstructorUsedError;
 
@@ -38,7 +38,7 @@ abstract class $LocationDtoCopyWith<$Res> {
       _$LocationDtoCopyWithImpl<$Res, LocationDto>;
   @useResult
   $Res call(
-      {String name, String disassembledName, String type, List<double> coord});
+      {String name, String? disassembledName, String type, List<double> coord});
 }
 
 /// @nodoc
@@ -55,7 +55,7 @@ class _$LocationDtoCopyWithImpl<$Res, $Val extends LocationDto>
   @override
   $Res call({
     Object? name = null,
-    Object? disassembledName = null,
+    Object? disassembledName = freezed,
     Object? type = null,
     Object? coord = null,
   }) {
@@ -64,10 +64,10 @@ class _$LocationDtoCopyWithImpl<$Res, $Val extends LocationDto>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      disassembledName: null == disassembledName
+      disassembledName: freezed == disassembledName
           ? _value.disassembledName
           : disassembledName // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -89,7 +89,7 @@ abstract class _$$_LocationDtoCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String name, String disassembledName, String type, List<double> coord});
+      {String name, String? disassembledName, String type, List<double> coord});
 }
 
 /// @nodoc
@@ -104,7 +104,7 @@ class __$$_LocationDtoCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = null,
-    Object? disassembledName = null,
+    Object? disassembledName = freezed,
     Object? type = null,
     Object? coord = null,
   }) {
@@ -113,10 +113,10 @@ class __$$_LocationDtoCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      disassembledName: null == disassembledName
+      disassembledName: freezed == disassembledName
           ? _value.disassembledName
           : disassembledName // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -134,7 +134,7 @@ class __$$_LocationDtoCopyWithImpl<$Res>
 class _$_LocationDto extends _LocationDto {
   const _$_LocationDto(
       {required this.name,
-      required this.disassembledName,
+      this.disassembledName,
       required this.type,
       required final List<double> coord})
       : _coord = coord,
@@ -146,7 +146,7 @@ class _$_LocationDto extends _LocationDto {
   @override
   final String name;
   @override
-  final String disassembledName;
+  final String? disassembledName;
   @override
   final String type;
   final List<double> _coord;
@@ -196,7 +196,7 @@ class _$_LocationDto extends _LocationDto {
 abstract class _LocationDto extends LocationDto {
   const factory _LocationDto(
       {required final String name,
-      required final String disassembledName,
+      final String? disassembledName,
       required final String type,
       required final List<double> coord}) = _$_LocationDto;
   const _LocationDto._() : super._();
@@ -207,7 +207,7 @@ abstract class _LocationDto extends LocationDto {
   @override
   String get name;
   @override
-  String get disassembledName;
+  String? get disassembledName;
   @override
   String get type;
   @override
