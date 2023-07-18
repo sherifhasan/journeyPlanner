@@ -1,5 +1,7 @@
 # Journey Planner
-This app assists users in searching for a starting point and displays matching journeys. It provides a simple interface for users to enter search text and retrieves results
+
+This app assists users in searching for a starting point and displays matching journeys. It provides
+a simple interface for users to enter search text and retrieves results
 
 ## Decisions
 
@@ -37,9 +39,11 @@ It provides type safety, reducing runtime exceptions and improving code quality.
 
 ### UI
 
-1. Using the [Flutter hooks](https://pub.dev/packages/flutter_hooks) enhances code readability by removing the need for StatefulWidget and setState, 
+1. Using the [Flutter hooks](https://pub.dev/packages/flutter_hooks) enhances code readability by
+   removing the need for StatefulWidget and setState,
 2. Reducing boilerplate code and making the logic more declarative.
-3. Flutter Hooks promotes reusability of hooks-based components, allowing for easier composition and sharing of logic across different parts of the app.
+3. Flutter Hooks promotes reusability of hooks-based components, allowing for easier composition and
+   sharing of logic across different parts of the app.
 
 
 
