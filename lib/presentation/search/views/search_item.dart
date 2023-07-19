@@ -34,6 +34,10 @@ class SearchItem extends StatelessWidget {
                 'Location type: ${location.type}',
                 style: const TextStyle(fontSize: 16, color: Colors.blue),
               ),
+              Text(
+                'Locality ${location.locality}',
+                style: const TextStyle(fontSize: 16, color: Colors.blue),
+              ),
             ],
           ),
           trailing: location.isBest == true
