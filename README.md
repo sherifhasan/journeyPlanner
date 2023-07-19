@@ -1,4 +1,5 @@
-# Journey Planner
+# Journey Planner <img src="https://img.shields.io/badge/made%20with-dart-blue.svg" alt="made with dart">
+
 
 This app assists users in searching for a starting point and displays matching journeys. It follows the Domain-Driven Design (DDD) architecture for a clear separation of concerns, utilizes GetIt for dependency injection, and employs the BLoC (Business Logic Component) pattern for state management. Flutter Hooks is used for stateful logic within functional widgets.
 
