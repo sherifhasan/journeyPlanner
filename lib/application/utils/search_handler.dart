@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 
 class SearchHandler {
-  final int milliseconds;
   Timer? timer;
+  final int milliseconds;
 
   SearchHandler({required this.milliseconds});
 
