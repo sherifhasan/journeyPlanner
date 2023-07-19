@@ -45,7 +45,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.journey_planner"
-        minSdkVersion flutter.minSdkVersion
+        minSdkVersion 24
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
