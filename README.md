@@ -42,3 +42,7 @@ It provides type safety, reducing runtime exceptions and improving code quality.
 2. Reducing boilerplate code and making the logic more declarative.
 3. Flutter Hooks promotes reusability of hooks-based components, allowing for easier composition and
    sharing of logic across different parts of the app.
+
+### Testing 
+1. UI testing using [Golden testing](https://pub.dev/packages/golden_toolki) to view search screen on multiple screen sizes
+2. Unit testing using [Mocktail](https://pub.dev/packages/mocktail) providing a clean and expressive API for creating and verifying mock objects, reducing test setup and improving test readability
