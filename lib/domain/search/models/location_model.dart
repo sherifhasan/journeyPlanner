@@ -9,6 +9,7 @@ class LocationModel with _$LocationModel {
     String? disassembledName,
     required String type,
     required List<double> coord,
-    required bool? isBest,
+    bool? isBest,
+    required String locality,
   }) = _LocationModel;
 }

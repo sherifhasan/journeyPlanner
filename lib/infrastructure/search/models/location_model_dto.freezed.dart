@@ -24,6 +24,8 @@ mixin _$LocationDto {
   String? get disassembledName => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
   List<double> get coord => throw _privateConstructorUsedError;
+  @JsonKey(name: 'parent')
+  ParentDto get parentDto => throw _privateConstructorUsedError;
   bool? get isBest => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -43,7 +45,10 @@ abstract class $LocationDtoCopyWith<$Res> {
       String? disassembledName,
       String type,
       List<double> coord,
+      @JsonKey(name: 'parent') ParentDto parentDto,
       bool? isBest});
+
+  $ParentDtoCopyWith<$Res> get parentDto;
 }
 
 /// @nodoc
@@ -63,6 +68,7 @@ class _$LocationDtoCopyWithImpl<$Res, $Val extends LocationDto>
     Object? disassembledName = freezed,
     Object? type = null,
     Object? coord = null,
+    Object? parentDto = null,
     Object? isBest = freezed,
   }) {
     return _then(_value.copyWith(
@@ -82,11 +88,23 @@ class _$LocationDtoCopyWithImpl<$Res, $Val extends LocationDto>
           ? _value.coord
           : coord // ignore: cast_nullable_to_non_nullable
               as List<double>,
+      parentDto: null == parentDto
+          ? _value.parentDto
+          : parentDto // ignore: cast_nullable_to_non_nullable
+              as ParentDto,
       isBest: freezed == isBest
           ? _value.isBest
           : isBest // ignore: cast_nullable_to_non_nullable
               as bool?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ParentDtoCopyWith<$Res> get parentDto {
+    return $ParentDtoCopyWith<$Res>(_value.parentDto, (value) {
+      return _then(_value.copyWith(parentDto: value) as $Val);
+    });
   }
 }
 
@@ -103,7 +121,11 @@ abstract class _$$_LocationDtoCopyWith<$Res>
       String? disassembledName,
       String type,
       List<double> coord,
+      @JsonKey(name: 'parent') ParentDto parentDto,
       bool? isBest});
+
+  @override
+  $ParentDtoCopyWith<$Res> get parentDto;
 }
 
 /// @nodoc
@@ -121,6 +143,7 @@ class __$$_LocationDtoCopyWithImpl<$Res>
     Object? disassembledName = freezed,
     Object? type = null,
     Object? coord = null,
+    Object? parentDto = null,
     Object? isBest = freezed,
   }) {
     return _then(_$_LocationDto(
@@ -140,6 +163,10 @@ class __$$_LocationDtoCopyWithImpl<$Res>
           ? _value._coord
           : coord // ignore: cast_nullable_to_non_nullable
               as List<double>,
+      parentDto: null == parentDto
+          ? _value.parentDto
+          : parentDto // ignore: cast_nullable_to_non_nullable
+              as ParentDto,
       isBest: freezed == isBest
           ? _value.isBest
           : isBest // ignore: cast_nullable_to_non_nullable
@@ -156,7 +183,8 @@ class _$_LocationDto extends _LocationDto {
       this.disassembledName,
       required this.type,
       required final List<double> coord,
-      required this.isBest})
+      @JsonKey(name: 'parent') required this.parentDto,
+      this.isBest})
       : _coord = coord,
         super._();
 
@@ -178,11 +206,14 @@ class _$_LocationDto extends _LocationDto {
   }
 
   @override
+  @JsonKey(name: 'parent')
+  final ParentDto parentDto;
+  @override
   final bool? isBest;
 
   @override
   String toString() {
-    return 'LocationDto(name: $name, disassembledName: $disassembledName, type: $type, coord: $coord, isBest: $isBest)';
+    return 'LocationDto(name: $name, disassembledName: $disassembledName, type: $type, coord: $coord, parentDto: $parentDto, isBest: $isBest)';
   }
 
   @override
@@ -195,13 +226,15 @@ class _$_LocationDto extends _LocationDto {
                 other.disassembledName == disassembledName) &&
             (identical(other.type, type) || other.type == type) &&
             const DeepCollectionEquality().equals(other._coord, _coord) &&
+            (identical(other.parentDto, parentDto) ||
+                other.parentDto == parentDto) &&
             (identical(other.isBest, isBest) || other.isBest == isBest));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, name, disassembledName, type,
-      const DeepCollectionEquality().hash(_coord), isBest);
+      const DeepCollectionEquality().hash(_coord), parentDto, isBest);
 
   @JsonKey(ignore: true)
   @override
@@ -223,7 +256,8 @@ abstract class _LocationDto extends LocationDto {
       final String? disassembledName,
       required final String type,
       required final List<double> coord,
-      required final bool? isBest}) = _$_LocationDto;
+      @JsonKey(name: 'parent') required final ParentDto parentDto,
+      final bool? isBest}) = _$_LocationDto;
   const _LocationDto._() : super._();
 
   factory _LocationDto.fromJson(Map<String, dynamic> json) =
@@ -238,9 +272,164 @@ abstract class _LocationDto extends LocationDto {
   @override
   List<double> get coord;
   @override
+  @JsonKey(name: 'parent')
+  ParentDto get parentDto;
+  @override
   bool? get isBest;
   @override
   @JsonKey(ignore: true)
   _$$_LocationDtoCopyWith<_$_LocationDto> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ParentDto _$ParentDtoFromJson(Map<String, dynamic> json) {
+  return _ParentDto.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ParentDto {
+  String get name => throw _privateConstructorUsedError;
+  String get type => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ParentDtoCopyWith<ParentDto> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ParentDtoCopyWith<$Res> {
+  factory $ParentDtoCopyWith(ParentDto value, $Res Function(ParentDto) then) =
+      _$ParentDtoCopyWithImpl<$Res, ParentDto>;
+  @useResult
+  $Res call({String name, String type});
+}
+
+/// @nodoc
+class _$ParentDtoCopyWithImpl<$Res, $Val extends ParentDto>
+    implements $ParentDtoCopyWith<$Res> {
+  _$ParentDtoCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = null,
+    Object? type = null,
+  }) {
+    return _then(_value.copyWith(
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_ParentDtoCopyWith<$Res> implements $ParentDtoCopyWith<$Res> {
+  factory _$$_ParentDtoCopyWith(
+          _$_ParentDto value, $Res Function(_$_ParentDto) then) =
+      __$$_ParentDtoCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String name, String type});
+}
+
+/// @nodoc
+class __$$_ParentDtoCopyWithImpl<$Res>
+    extends _$ParentDtoCopyWithImpl<$Res, _$_ParentDto>
+    implements _$$_ParentDtoCopyWith<$Res> {
+  __$$_ParentDtoCopyWithImpl(
+      _$_ParentDto _value, $Res Function(_$_ParentDto) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = null,
+    Object? type = null,
+  }) {
+    return _then(_$_ParentDto(
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ParentDto extends _ParentDto {
+  const _$_ParentDto({required this.name, required this.type}) : super._();
+
+  factory _$_ParentDto.fromJson(Map<String, dynamic> json) =>
+      _$$_ParentDtoFromJson(json);
+
+  @override
+  final String name;
+  @override
+  final String type;
+
+  @override
+  String toString() {
+    return 'ParentDto(name: $name, type: $type)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ParentDto &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.type, type) || other.type == type));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, type);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ParentDtoCopyWith<_$_ParentDto> get copyWith =>
+      __$$_ParentDtoCopyWithImpl<_$_ParentDto>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ParentDtoToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ParentDto extends ParentDto {
+  const factory _ParentDto(
+      {required final String name, required final String type}) = _$_ParentDto;
+  const _ParentDto._() : super._();
+
+  factory _ParentDto.fromJson(Map<String, dynamic> json) =
+      _$_ParentDto.fromJson;
+
+  @override
+  String get name;
+  @override
+  String get type;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ParentDtoCopyWith<_$_ParentDto> get copyWith =>
       throw _privateConstructorUsedError;
 }
