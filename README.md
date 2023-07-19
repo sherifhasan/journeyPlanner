@@ -46,3 +46,43 @@ It provides type safety, reducing runtime exceptions and improving code quality.
 ### Testing 
 1. UI testing using [Golden testing](https://pub.dev/packages/golden_toolki) to view search screen on multiple screen sizes
 2. Unit testing using [Mocktail](https://pub.dev/packages/mocktail) providing a clean and expressive API for creating and verifying mock objects, reducing test setup and improving test readability
+
+### Folders structure
+├── application
+│   ├── features
+│   │   └── search
+│   │       ├── search_cubit.dart
+│   │       ├── search_cubit.freezed.dart
+│   │       └── search_state.dart
+│   └── utils
+│       ├── app_constants.dart
+│       └── search_handler.dart
+├── domain
+│   └── search
+│       ├── models
+│       │   ├── location_model.dart
+│       │   └── location_model.freezed.dart
+│       └── search_repository.dart
+├── infrastructure
+│   └── search
+│       ├── datasource
+│       │   ├── data_source.dart
+│       │   └── remote_data_source_impl.dart
+│       ├── models
+│       │   ├── location_model_dto.dart
+│       │   ├── location_model_dto.freezed.dart
+│       │   └── location_model_dto.g.dart
+│       └── search_repository_imp.dart
+├── injection.dart
+├── main.dart
+└── presentation
+    └── search
+        ├── search_screen.dart
+        └── views
+            ├── search_data_view.dart
+            ├── search_empty_view.dart
+            ├── search_error_view.dart
+            ├── search_item.dart
+            ├── search_loading_view.dart
+            └── views.dart
+
