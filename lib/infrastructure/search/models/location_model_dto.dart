@@ -12,6 +12,7 @@ class LocationDto with _$LocationDto {
     String? disassembledName,
     required String type,
     required List<double> coord,
+    required bool? isBest,
   }) = _LocationDto;
 
   const LocationDto._();
@@ -20,5 +21,9 @@ class LocationDto with _$LocationDto {
       _$LocationDtoFromJson(json);
 
   LocationModel toEntity() => LocationModel(
-      name: name, disassembledName: disassembledName, type: type, coord: coord);
+      name: name,
+      disassembledName: disassembledName,
+      type: type,
+      coord: coord,
+      isBest: isBest);
 }

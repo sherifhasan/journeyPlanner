@@ -36,6 +36,12 @@ class SearchItem extends StatelessWidget {
               ),
             ],
           ),
+          trailing: location.isBest == true
+              ? const Text(
+                  'Best',
+                  style: TextStyle(fontSize: 16, color: Colors.green),
+                )
+              : const SizedBox(),
         ),
       ),
     );

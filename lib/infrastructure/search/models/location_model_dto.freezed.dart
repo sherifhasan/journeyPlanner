@@ -24,6 +24,7 @@ mixin _$LocationDto {
   String? get disassembledName => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
   List<double> get coord => throw _privateConstructorUsedError;
+  bool? get isBest => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,7 +39,11 @@ abstract class $LocationDtoCopyWith<$Res> {
       _$LocationDtoCopyWithImpl<$Res, LocationDto>;
   @useResult
   $Res call(
-      {String name, String? disassembledName, String type, List<double> coord});
+      {String name,
+      String? disassembledName,
+      String type,
+      List<double> coord,
+      bool? isBest});
 }
 
 /// @nodoc
@@ -58,6 +63,7 @@ class _$LocationDtoCopyWithImpl<$Res, $Val extends LocationDto>
     Object? disassembledName = freezed,
     Object? type = null,
     Object? coord = null,
+    Object? isBest = freezed,
   }) {
     return _then(_value.copyWith(
       name: null == name
@@ -76,6 +82,10 @@ class _$LocationDtoCopyWithImpl<$Res, $Val extends LocationDto>
           ? _value.coord
           : coord // ignore: cast_nullable_to_non_nullable
               as List<double>,
+      isBest: freezed == isBest
+          ? _value.isBest
+          : isBest // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ) as $Val);
   }
 }
@@ -89,7 +99,11 @@ abstract class _$$_LocationDtoCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String name, String? disassembledName, String type, List<double> coord});
+      {String name,
+      String? disassembledName,
+      String type,
+      List<double> coord,
+      bool? isBest});
 }
 
 /// @nodoc
@@ -107,6 +121,7 @@ class __$$_LocationDtoCopyWithImpl<$Res>
     Object? disassembledName = freezed,
     Object? type = null,
     Object? coord = null,
+    Object? isBest = freezed,
   }) {
     return _then(_$_LocationDto(
       name: null == name
@@ -125,6 +140,10 @@ class __$$_LocationDtoCopyWithImpl<$Res>
           ? _value._coord
           : coord // ignore: cast_nullable_to_non_nullable
               as List<double>,
+      isBest: freezed == isBest
+          ? _value.isBest
+          : isBest // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -136,7 +155,8 @@ class _$_LocationDto extends _LocationDto {
       {required this.name,
       this.disassembledName,
       required this.type,
-      required final List<double> coord})
+      required final List<double> coord,
+      required this.isBest})
       : _coord = coord,
         super._();
 
@@ -158,8 +178,11 @@ class _$_LocationDto extends _LocationDto {
   }
 
   @override
+  final bool? isBest;
+
+  @override
   String toString() {
-    return 'LocationDto(name: $name, disassembledName: $disassembledName, type: $type, coord: $coord)';
+    return 'LocationDto(name: $name, disassembledName: $disassembledName, type: $type, coord: $coord, isBest: $isBest)';
   }
 
   @override
@@ -171,13 +194,14 @@ class _$_LocationDto extends _LocationDto {
             (identical(other.disassembledName, disassembledName) ||
                 other.disassembledName == disassembledName) &&
             (identical(other.type, type) || other.type == type) &&
-            const DeepCollectionEquality().equals(other._coord, _coord));
+            const DeepCollectionEquality().equals(other._coord, _coord) &&
+            (identical(other.isBest, isBest) || other.isBest == isBest));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, name, disassembledName, type,
-      const DeepCollectionEquality().hash(_coord));
+      const DeepCollectionEquality().hash(_coord), isBest);
 
   @JsonKey(ignore: true)
   @override
@@ -198,7 +222,8 @@ abstract class _LocationDto extends LocationDto {
       {required final String name,
       final String? disassembledName,
       required final String type,
-      required final List<double> coord}) = _$_LocationDto;
+      required final List<double> coord,
+      required final bool? isBest}) = _$_LocationDto;
   const _LocationDto._() : super._();
 
   factory _LocationDto.fromJson(Map<String, dynamic> json) =
@@ -212,6 +237,8 @@ abstract class _LocationDto extends LocationDto {
   String get type;
   @override
   List<double> get coord;
+  @override
+  bool? get isBest;
   @override
   @JsonKey(ignore: true)
   _$$_LocationDtoCopyWith<_$_LocationDto> get copyWith =>

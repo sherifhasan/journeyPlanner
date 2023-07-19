@@ -20,6 +20,7 @@ mixin _$LocationModel {
   String? get disassembledName => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
   List<double> get coord => throw _privateConstructorUsedError;
+  bool? get isBest => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $LocationModelCopyWith<LocationModel> get copyWith =>
@@ -33,7 +34,11 @@ abstract class $LocationModelCopyWith<$Res> {
       _$LocationModelCopyWithImpl<$Res, LocationModel>;
   @useResult
   $Res call(
-      {String name, String? disassembledName, String type, List<double> coord});
+      {String name,
+      String? disassembledName,
+      String type,
+      List<double> coord,
+      bool? isBest});
 }
 
 /// @nodoc
@@ -53,6 +58,7 @@ class _$LocationModelCopyWithImpl<$Res, $Val extends LocationModel>
     Object? disassembledName = freezed,
     Object? type = null,
     Object? coord = null,
+    Object? isBest = freezed,
   }) {
     return _then(_value.copyWith(
       name: null == name
@@ -71,6 +77,10 @@ class _$LocationModelCopyWithImpl<$Res, $Val extends LocationModel>
           ? _value.coord
           : coord // ignore: cast_nullable_to_non_nullable
               as List<double>,
+      isBest: freezed == isBest
+          ? _value.isBest
+          : isBest // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ) as $Val);
   }
 }
@@ -84,7 +94,11 @@ abstract class _$$_LocationModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String name, String? disassembledName, String type, List<double> coord});
+      {String name,
+      String? disassembledName,
+      String type,
+      List<double> coord,
+      bool? isBest});
 }
 
 /// @nodoc
@@ -102,6 +116,7 @@ class __$$_LocationModelCopyWithImpl<$Res>
     Object? disassembledName = freezed,
     Object? type = null,
     Object? coord = null,
+    Object? isBest = freezed,
   }) {
     return _then(_$_LocationModel(
       name: null == name
@@ -120,6 +135,10 @@ class __$$_LocationModelCopyWithImpl<$Res>
           ? _value._coord
           : coord // ignore: cast_nullable_to_non_nullable
               as List<double>,
+      isBest: freezed == isBest
+          ? _value.isBest
+          : isBest // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -131,7 +150,8 @@ class _$_LocationModel implements _LocationModel {
       {required this.name,
       this.disassembledName,
       required this.type,
-      required final List<double> coord})
+      required final List<double> coord,
+      required this.isBest})
       : _coord = coord;
 
   @override
@@ -149,8 +169,11 @@ class _$_LocationModel implements _LocationModel {
   }
 
   @override
+  final bool? isBest;
+
+  @override
   String toString() {
-    return 'LocationModel(name: $name, disassembledName: $disassembledName, type: $type, coord: $coord)';
+    return 'LocationModel(name: $name, disassembledName: $disassembledName, type: $type, coord: $coord, isBest: $isBest)';
   }
 
   @override
@@ -162,12 +185,13 @@ class _$_LocationModel implements _LocationModel {
             (identical(other.disassembledName, disassembledName) ||
                 other.disassembledName == disassembledName) &&
             (identical(other.type, type) || other.type == type) &&
-            const DeepCollectionEquality().equals(other._coord, _coord));
+            const DeepCollectionEquality().equals(other._coord, _coord) &&
+            (identical(other.isBest, isBest) || other.isBest == isBest));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, name, disassembledName, type,
-      const DeepCollectionEquality().hash(_coord));
+      const DeepCollectionEquality().hash(_coord), isBest);
 
   @JsonKey(ignore: true)
   @override
@@ -181,7 +205,8 @@ abstract class _LocationModel implements LocationModel {
       {required final String name,
       final String? disassembledName,
       required final String type,
-      required final List<double> coord}) = _$_LocationModel;
+      required final List<double> coord,
+      required final bool? isBest}) = _$_LocationModel;
 
   @override
   String get name;
@@ -191,6 +216,8 @@ abstract class _LocationModel implements LocationModel {
   String get type;
   @override
   List<double> get coord;
+  @override
+  bool? get isBest;
   @override
   @JsonKey(ignore: true)
   _$$_LocationModelCopyWith<_$_LocationModel> get copyWith =>

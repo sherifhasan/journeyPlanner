@@ -14,6 +14,7 @@ _$_LocationDto _$$_LocationDtoFromJson(Map<String, dynamic> json) =>
       coord: (json['coord'] as List<dynamic>)
           .map((e) => (e as num).toDouble())
           .toList(),
+      isBest: json['isBest'] as bool?,
     );
 
 Map<String, dynamic> _$$_LocationDtoToJson(_$_LocationDto instance) =>
@@ -22,4 +23,5 @@ Map<String, dynamic> _$$_LocationDtoToJson(_$_LocationDto instance) =>
       'disassembledName': instance.disassembledName,
       'type': instance.type,
       'coord': instance.coord,
+      'isBest': instance.isBest,
     };
