@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 import 'package:journey_planner/application/utils/app_constants.dart';
@@ -14,9 +15,15 @@ class RemoteDataSourceImpl extends DataSource {
       if (response.statusCode != 200) return [];
       final data = json.decode(utf8.decode(response.bodyBytes));
       List<dynamic> locations = data['locations'];
-      return locations
-          .map((location) => LocationDto.fromJson(location))
-          .toList();
+      final locationsList =
+          locations.map((location) => LocationDto.fromJson(location)).toList();
+      locationsList.sort((a, b) {
+        if (b.isBest == true) {
+          return 1;
+        }
+        return -1;
+      });
+      return locationsList;
     } on SocketException {
       throw const SocketException(ErrorMessages.noInternetError);
     } catch (e) {

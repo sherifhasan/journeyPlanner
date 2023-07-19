@@ -19,8 +19,7 @@ class MyApp extends StatelessWidget {
       create: (context) => getIt.get<SearchCubit>(),
       child: MaterialApp(
         title: 'Journey planner',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
+        theme: ThemeData.light(
           useMaterial3: true,
         ),
         debugShowCheckedModeBanner: false,

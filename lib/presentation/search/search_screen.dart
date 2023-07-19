@@ -3,6 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:journey_planner/application/features/search/search_cubit.dart';
 import 'package:journey_planner/application/utils/app_constants.dart';
+import 'package:journey_planner/application/utils/search_handler.dart';
 import 'views/views.dart';
 
 class SearchScreen extends HookWidget {
@@ -10,6 +11,7 @@ class SearchScreen extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
+    final searchHandler = useMemoized(() => SearchHandler(milliseconds: 500));
     final searchController = useTextEditingController();
     final searchCubit = context.read<SearchCubit>();
     return SafeArea(
@@ -27,6 +29,11 @@ class SearchScreen extends HookWidget {
                         margin: const EdgeInsets.all(8),
                         child: TextField(
                           controller: searchController,
+                          onChanged: (value) {
+                            searchHandler.run(() {
+                              searchCubit.startSearch(searchController.text);
+                            });
+                          },
                           autofocus: true,
                           decoration: InputDecoration(
                             labelText: 'Search...',

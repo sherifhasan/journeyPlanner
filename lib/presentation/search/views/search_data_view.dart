@@ -10,6 +10,7 @@ class SearchDataView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
       scrollDirection: Axis.vertical,
       itemCount: locations.length,
       itemBuilder: (context, index) => SearchItem(location: locations[index]),
