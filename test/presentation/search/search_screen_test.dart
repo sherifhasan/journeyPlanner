@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:golden_toolkit/golden_toolkit.dart';
@@ -35,6 +37,6 @@ void main() {
           Device.tabletLandscape,
         ],
       );
-    });
+    }, skip: !Platform.isMacOS);
   });
 }
