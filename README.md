@@ -47,7 +47,8 @@ It provides type safety, reducing runtime exceptions and improving code quality.
 1. UI testing using [Golden testing](https://pub.dev/packages/golden_toolki) to view search screen on multiple screen sizes
 2. Unit testing using [Mocktail](https://pub.dev/packages/mocktail) providing a clean and expressive API for creating and verifying mock objects, reducing test setup and improving test readability
 
-### Folders structure
+### Folder structure
+```bash
 ├── application
 │   ├── features
 │   │   └── search
@@ -85,4 +86,4 @@ It provides type safety, reducing runtime exceptions and improving code quality.
             ├── search_item.dart
             ├── search_loading_view.dart
             └── views.dart
-
+```
